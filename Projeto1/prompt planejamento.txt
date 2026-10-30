@@ -1,0 +1,18 @@
+Eu quero que você execute o plano @plan.md no arquivo @index.html e @style.css porém por hora só faça as seções HEADER e HERO.                                                          Em outra sessão nós vamos fazer o restante.                  
+ Utilize apenas HTML e CSS, sem javascript.                                                        
+Utilize técnicas simples e modernas, com fácil manutenção.                                                
+Para organizar os elementos, utilize flexbox.
+
+a hero deve ter o mesmo max-width do header, para que o conteúdo não fique perdido nas laterais.
+
+
+o css precisa ser mobile-first, faça a troca e no @media utilize width > 900px como breaking point.
+
+
+-----
+prompt parte 2
+Com base no @plan.md faça as seções de funcionalidade, cta e rodapé no @index.html e @style.css.                                                                                   
+matenha a mesma padronização e estilização, mobile-first e elementos HTML e CSS simples.
+
+na seção de funcionalidades do @index.html e @style.css, diminua os prints para no máximo 500 de altura. Expanda os textos descritivos das funcionalidades 
+para pelo menos 3 parágrafos.

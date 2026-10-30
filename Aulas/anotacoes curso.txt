@@ -1,0 +1,4 @@
+Aplicar CSS em 3 tipos?
+Por Tag
+Por Class 
+ou por id
