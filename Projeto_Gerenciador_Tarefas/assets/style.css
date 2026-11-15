@@ -1,0 +1,233 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #23332c;
+    background: #f1f4f2;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 64px 20px;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.app {
+    width: min(100%, 620px);
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: #527362;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    letter-spacing: -0.04em;
+}
+
+.page-description {
+    margin-bottom: 0;
+    color: #68766f;
+    line-height: 1.5;
+}
+
+.card {
+    padding: 24px;
+    border: 1px solid #e6ebe7;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgb(30 55 42 / 5%);
+}
+
+.card + .card {
+    margin-top: 16px;
+}
+
+.card h2 {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+}
+
+.task-form input {
+    min-width: 0;
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #dce4de;
+    border-radius: 8px;
+    color: #23332c;
+    outline: none;
+}
+
+.task-form input::placeholder {
+    color: #929e97;
+}
+
+.task-form input:focus {
+    border-color: #37684e;
+    box-shadow: 0 0 0 3px rgb(55 104 78 / 14%);
+}
+
+.button {
+    min-height: 44px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 140ms ease, transform 140ms ease;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button:focus-visible {
+    outline: 3px solid #9ab9a5;
+    outline-offset: 2px;
+}
+
+.button-primary,
+.button-delete {
+    background: #285d40;
+    color: #fff;
+}
+
+.button-primary:hover,
+.button-delete:hover {
+    background: #1e4932;
+}
+
+.task-card {
+    min-height: 150px;
+}
+
+.list-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.list-heading h2 {
+    margin-bottom: 0;
+}
+
+.task-count {
+    color: #68766f;
+    font-size: 0.875rem;
+}
+
+.task-list {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px;
+    border: 1px solid #edf0ed;
+    border-radius: 9px;
+}
+
+.task-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    line-height: 1.45;
+}
+
+.task-text.is-completed {
+    color: #849088;
+    text-decoration: line-through;
+}
+
+.task-actions {
+    display: flex;
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.task-actions .button {
+    min-height: 36px;
+    padding: 8px 10px;
+    font-size: 0.875rem;
+}
+
+.empty-state {
+    padding: 26px 8px 12px;
+    color: #78857d;
+    text-align: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 40px 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .task-form {
+        flex-direction: column;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .task-actions {
+        align-self: flex-end;
+    }
+}

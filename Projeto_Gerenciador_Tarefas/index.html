@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Organize suas tarefas em uma lista simples e prática.">
+    <title>Minhas tarefas</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="page-header">
+            <p class="eyebrow">ORGANIZAÇÃO DO DIA</p>
+            <h1>Minhas tarefas - Erik Tauil</h1>
+            <p class="page-description">Um passo de cada vez. Registre o que você precisa fazer.</p>
+        </header>
+
+        <section class="card" aria-labelledby="add-task-title">
+            <h2 id="add-task-title">Adicionar tarefa</h2>
+            <form id="task-form" class="task-form">
+                <label class="visually-hidden" for="task-input">Nova tarefa</label>
+                <input
+                    id="task-input"
+                    name="task"
+                    type="text"
+                    maxlength="160"
+                    placeholder="Digite uma nova tarefa..."
+                    autocomplete="off"
+                    required
+                >
+                <button class="button button-primary" type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section class="card task-card" aria-labelledby="task-list-title">
+            <div class="list-heading">
+                <h2 id="task-list-title">Sua lista</h2>
+                <span id="task-count" class="task-count">0 tarefas</span>
+            </div>
+            <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        </section>
+    </main>
+</body>
+</html>
